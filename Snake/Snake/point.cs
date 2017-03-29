@@ -12,10 +12,16 @@ namespace Snake
         public int y;
         public char sym;
 
-        public Point()
+        public Point()//Создаем конструктор
         {
-            Console.WriteLine("Создается новая точка");
 
+        }
+
+        public Point(int _x, int _y, char _sym)
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
         }
 
         public void Draw()                       //так называемый процедурный метод
