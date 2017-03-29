@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class point
+    class Point
     {
         public int x;
         public int y;
         public char sym;
+
+        public Point()
+        {
+            Console.WriteLine("Создается новая точка");
+
+        }
 
         public void Draw()                       //так называемый процедурный метод
                                                 //эта ф-ия позволяет нам не копировать несколько раз нижеприведенный код, а выполняет его
