@@ -10,23 +10,27 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            Point p1 = new Point(1, 3, '*');
+
+            Point p2 = new Point(4, 5, '$');
+
+            Point p3 = new Point(2, 8, '~');
+
+            Point p4 = new Point(26, 8, '%');
+
             List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
+            pList.Add(p3);
+            pList.Add(p4);
 
-            pList.Add(new Point(1, 3, '#'));
-            pList.Add(new Point(2, 3, '*'));
-            pList.Add(new Point(3, 3, '!'));
-            pList.Add(new Point(4, 3, '@'));
-
-            for (int i = 0; i < pList.Count; i++)
+            foreach (Point i in pList)
             {
-                int z = i + 1;
-                Console.WriteLine("Точка " + z + " имеет координаты x:" + pList[i].x + " y:" + pList[i].y +
-                    " и символ \" " + pList[i].sym + "\""
-                    );
+                i.Draw();
+                Console.WriteLine(i);
+
             }
-
-
-            Console.ReadLine();
+                Console.ReadLine();
 
 
         }         
